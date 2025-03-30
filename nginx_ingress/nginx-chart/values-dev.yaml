@@ -1,0 +1,10 @@
+#values-dev.yaml
+replicaCount: 1
+image:
+  tag: "v1"
+ingress:
+  host: noelbansikah.dev
+  tls:
+    enabled: true
+    crtPath: "files/tls/dev/tls.crt"
+    keyPath: "files/tls/dev/tls.key"

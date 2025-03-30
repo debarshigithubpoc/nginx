@@ -1,0 +1,10 @@
+#values-staging.yaml
+replicaCount: 2
+image:
+  tag: "v1"
+ingress:
+  host: noelbansikah.com
+  tls:
+    enabled: true
+    crtPath: "files/tls/stg/tls.crt"
+    keyPath: "files/tls/stg/tls.key"

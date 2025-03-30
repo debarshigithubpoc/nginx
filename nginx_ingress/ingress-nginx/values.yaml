@@ -1,0 +1,25 @@
+replicaCount: 1
+
+image:
+  repository: registry.k8s.io/ingress-nginx/controller
+  tag: v1.11.2
+  pullPolicy: IfNotPresent
+
+service:
+  enabled: true
+  type: NodePort
+  annotations: {}
+  ports:
+    http: 
+      port: 80
+      targetPort: http
+      nodePort: 30382
+    https:
+      port: 443
+      targetPort: https
+      nodePort: 32150
+
+controller:
+  serviceAccount:
+    create: true
+    name: ingress-nginx-admission
