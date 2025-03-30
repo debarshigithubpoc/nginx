@@ -10,7 +10,11 @@ openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout tls/tls.key -out tls
 Install helm charts
 -------------------
 
+## INGRESS CONTROLLER INSTALL
 helm install ingress-nginx ./ingress-nginx 
+
+
+## HTTPS APPLICATION INSTALL
 
 helm install portfolio-dev . -f values-dev.yaml -n dev
 
